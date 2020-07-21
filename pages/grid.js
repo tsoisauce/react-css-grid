@@ -19,6 +19,7 @@ const grid = () => {
           <div className="grid-item">Grid Item 6</div>
           <div className="grid-item">Grid Item 7</div>
           <div className="grid-item">Grid Item 8</div>
+          <div className="grid-item grid-footer">Footer</div>
         </div>
       </body>
 
@@ -27,26 +28,34 @@ const grid = () => {
           display: grid;
           font-family: Arial, Helvetica, sans-serif;
           font-color: white;
+          font-size: large;
+          text-align: center;
+          padding: 20px;
           grid-template-columns: repeat(4, 25%);
           grid-auto-rows: minmax(200px, auto); 
-          grid-row-gap: 5px;
-          grid-column-gap: 5px;
-          grid-template-areas:
-            "header header header header"
+          grid-row-gap: 10px;
+          grid-column-gap: 10px;
+          justify-content: center;
+          align-content: center;
+          height: 100vh;
         }
         
         .grid-item {
-          font-size: large;
           background: #34ebeb;
-          text-align: center;
+          border-radius: 10px;
           border: 1px solid white;
           padding: 100px;
-          border-radius: 15px
+          grid-column: span 1;
         }
 
         .grid-header {
-          grid-area: header;
+          grid-column: 1 / -1;
           background: #a83293;
+        }
+
+        .grid-footer {
+          grid-column: 1 / -1;
+          background: #5ba832;
         }
       `}
       </style>
