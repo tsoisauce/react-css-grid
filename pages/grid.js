@@ -11,6 +11,7 @@ const grid = () => {
       <body>
         <div className="grid-container">
           <div className="grid-item grid-header">Header</div>
+          <div className="grid-item grid-hero">Hero</div>
           <div className="grid-item">Grid Item 1</div>
           <div className="grid-item">Grid Item 2</div>
           <div className="grid-item">Grid Item 3</div>
@@ -26,18 +27,15 @@ const grid = () => {
       <style jsx global>{`
         .grid-container {
           display: grid;
+          gap: 0.5rem;
           font-family: Arial, Helvetica, sans-serif;
           font-color: white;
           font-size: large;
           text-align: center;
           padding: 20px;
-          grid-template-columns: repeat(4, 25%);
-          grid-auto-rows: minmax(200px, auto); 
-          grid-row-gap: 10px;
-          grid-column-gap: 10px;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           justify-content: center;
-          align-content: center;
-          height: 100vh;
+          
         }
         
         .grid-item {
@@ -53,9 +51,14 @@ const grid = () => {
           background: #a83293;
         }
 
+        .grid-hero {
+          grid-column: 1 / -1;
+        }
+
         .grid-footer {
           grid-column: 1 / -1;
           background: #5ba832;
+          grid-auto-rows: minmax(200px, auto); 
         }
       `}
       </style>
