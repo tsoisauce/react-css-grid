@@ -53,6 +53,7 @@ const grid = () => {
 
         .grid-hero {
           grid-column: 1 / -1;
+          background: #4632a8;
         }
 
         .grid-footer {
