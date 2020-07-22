@@ -1,0 +1,38 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 4fr 1.5fr 0.4fr;
+}
+
+nav {
+  background: #a83293;
+  grid-column: 1 / -1;
+}
+
+main {
+  background: #4632a8;
+  grid-column: 1 / -1;
+}
+
+.grid-items {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
+  padding: 15px;
+}
+
+.grid-item {
+  background: #34ebeb;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+footer {
+  background: #5ba832;
+  grid-column: 1 / -1;
+}
